@@ -13,7 +13,7 @@ namespace StringBuilderFormatPlus
         static string oreo = "oreo";
         static Stopwatch sw;
 
-        static int countForTest3andTest4 = 5;
+        static int countForTest3andTest4 = 100000;
 
         static void Main(string[] args)
         {
