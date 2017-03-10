@@ -13,7 +13,7 @@ namespace StringBuilderFormatPlus
         static string oreo = "oreo";
         static Stopwatch sw;
 
-        static int countForTest3andTest4 = 100000;
+        static int countForTest3andTest4 = 1000;
 
         static void Main(string[] args)
         {
@@ -136,9 +136,9 @@ namespace StringBuilderFormatPlus
 
                     spanDiff = spanFirst.Subtract(spanSecond);
 
-                    outputDiff = string.Format("Time: {0} | {1} was faster by: {2}", 
+                    outputDiff = string.Format("Time: {0} | {1} was faster by: {2} | Total Milliseconds: {3}",
                                                 DateTime.Now.ToString(),
-                                                taskFirst, spanDiff.ToString());
+                                                taskFirst, spanDiff.ToString(), spanDiff.TotalMilliseconds.ToString());
                 }
                 else
                 {
@@ -148,11 +148,11 @@ namespace StringBuilderFormatPlus
                     spanSecond = new TimeSpan(swFirst.Elapsed.Days, swFirst.Elapsed.Hours,
                                               swFirst.Elapsed.Minutes, swFirst.Elapsed.Seconds, swFirst.Elapsed.Milliseconds);
 
-                    spanDiff = spanFirst.Subtract(spanSecond);
+                    spanDiff = spanSecond.Subtract(spanFirst);
 
-                    outputDiff = string.Format("Time: {0} | {1} was faster by total milliseconds: {2}",
+                    outputDiff = string.Format("Time: {0} | {1} was faster by: {2} | Total Milliseconds: {3}",
                                                DateTime.Now.ToString(),
-                                               task, spanDiff.TotalMilliseconds.ToString());
+                                               task, spanDiff.ToString(), spanDiff.TotalMilliseconds.ToString());
                 }
 
                 Debug.WriteLine(outputDiff);
