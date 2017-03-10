@@ -1,6 +1,66 @@
-Time: 3/10/2017 8:59:45 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 10 | StopWatch Time: 00:00:00.0216338
+Time: 3/10/2017 9:11:40 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 10 | StopWatch Time: 00:00:00.0262277
 -------------------------
-Time: 3/10/2017 8:59:45 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 10 | StopWatch Time: 00:00:00.0067583
+Time: 3/10/2017 9:11:55 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 10 | StopWatch Time: 00:00:00.0237246
 =========================>>>
-Time: 3/10/2017 8:59:45 AM | Task Test4()-ProcessStringBuilderAppend | For Loop was faster by: 00:00:00 | Total Milliseconds: 0
+Time: 3/10/2017 9:11:56 AM | Task Test3()-ProcessStringFormat was faster by: 00:00:00.0030000 | Total Milliseconds: 3
 ------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 9:12:57 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 10 | StopWatch Time: 00:00:00.0249100
+-------------------------
+Time: 3/10/2017 9:12:57 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 10 | StopWatch Time: 00:00:00.0077231
+=========================>>>
+Time: 3/10/2017 9:12:57 AM | Task Test3()-ProcessStringFormat was faster by: 00:00:00.0170000 | Total Milliseconds: 17
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 9:50:24 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 27000 | StopWatch Time: 00:00:12.7342819
+-------------------------
+Time: 3/10/2017 9:50:37 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 27000 | StopWatch Time: 00:00:12.9558999
+=========================>>>
+Time: 3/10/2017 9:50:37 AM | Task Test4()-ProcessStringBuilderAppend | For Loop was faster by: -00:00:00.2210000 | Total Milliseconds: -221
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 9:52:16 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 27000 | StopWatch Time: 00:00:12.4881542
+-------------------------
+Time: 3/10/2017 9:52:28 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 27000 | StopWatch Time: 00:00:11.7581309
+=========================>>>
+Time: 3/10/2017 9:52:28 AM | Task Test3()-ProcessStringFormat was faster by: -00:00:00.7300000 | Total Milliseconds: -730
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 9:56:01 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 27000 | StopWatch Time: 00:00:13.3671692
+-------------------------
+Time: 3/10/2017 9:56:14 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 27000 | StopWatch Time: 00:00:13.4290480
+=========================>>>
+Time: 3/10/2017 9:56:14 AM | Task Test4()-ProcessStringBuilderAppend | For Loop was faster by: 00:00:00.0620000 | Total Milliseconds: 62
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 9:59:09 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 27000 | StopWatch Time: 00:00:14.2754846
+-------------------------
+Time: 3/10/2017 9:59:22 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 27000 | StopWatch Time: 00:00:12.8684803
+=========================>>>
+Time: 3/10/2017 9:59:22 AM | Task Test3()-ProcessStringFormat was faster by: 00:00:01.4070000 | Total Milliseconds: 1407
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:00:57 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 27000 | StopWatch Time: 00:00:12.7448177
+-------------------------
+Time: 3/10/2017 10:01:09 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 27000 | StopWatch Time: 00:00:11.7552589
+=========================>>>
+Time: 3/10/2017 10:01:09 AM | Task Test3()-ProcessStringFormat was faster by: 00:00:00.9890000 | Total Milliseconds: 989
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:02:10 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 27000 | StopWatch Time: 00:00:17.7973029
+-------------------------
+Time: 3/10/2017 10:02:23 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 27000 | StopWatch Time: 00:00:13.4796647
+=========================>>>
+Time: 3/10/2017 10:02:23 AM | Task Test3()-ProcessStringFormat was slower by: 00:00:04.3180000 | Total Milliseconds: 4318
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:03:34 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 10000 | StopWatch Time: 00:00:04.9091963
+-------------------------
+Time: 3/10/2017 10:03:39 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 10000 | StopWatch Time: 00:00:04.9919598
+=========================>>>
+Time: 3/10/2017 10:03:39 AM | Task Test4()-ProcessStringBuilderAppend | For Loop was slower by: 00:00:00.0820000 | Total Milliseconds: 82
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:11:28 AM | Task: Test35()-ProcessStringPlus | For Loop | Number: 10000 | StopWatch Time: 00:00:04.7692363
+-------------------------
+Time: 3/10/2017 10:11:33 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 10000 | StopWatch Time: 00:00:05.0723166
+=========================>>>
+Time: 3/10/2017 10:11:33 AM | Task Test4()-ProcessStringBuilderAppend | For Loop was slower by: 00:00:00.3030000 | Total Milliseconds: 303
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:12:52 AM | Task: Test35()-ProcessStringPlus | For Loop | Number: 10000 | StopWatch Time: 00:00:04.5623855
+-------------------------
+Time: 3/10/2017 10:12:56 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 10000 | StopWatch Time: 00:00:04.4039612
+=========================>>>
+Time: 3/10/2017 10:12:56 AM | Task Test35()-ProcessStringPlus was slower by: 00:00:00.1590000 | Total Milliseconds: 159
+-------------------------------------------------------------------------------------------------------------------------------

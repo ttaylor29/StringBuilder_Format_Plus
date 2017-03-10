@@ -12,27 +12,32 @@ namespace StringBuilderFormatPlus
     {
         static string oreo = "oreo";
         static Stopwatch sw;
+        static Stopwatch swFirst;
 
-        static int countForTest3andTest4 = 10;
+        static int countForTest3andTest4 = 100000;
 
         static void Main(string[] args)
         {
             sw = new Stopwatch();
 
-            Stopwatch swFirst = new Stopwatch();
+            swFirst = new Stopwatch();
 
             //Test1();
             //Test2();
 
-            swFirst = Test3();
-            Test4(swFirst);
+            //swFirst = Test3();
+            //Test4(swFirst, "Test3()-ProcessStringFormat");
+
+
+            swFirst = Test35();
+            Test4(swFirst, "Test35()-ProcessStringPlus");
 
             //string test = AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\","");
         }
 
         private static Stopwatch Test3()
         {
-            sw.Reset();
+            sw = new Stopwatch();
             sw.Start();
 
            
@@ -48,9 +53,27 @@ namespace StringBuilderFormatPlus
             return sw;
         }
 
-        private static Stopwatch Test4(Stopwatch test3Sw)
+        private static Stopwatch Test35()
         {
-            sw.Reset();
+            sw = new Stopwatch();
+            sw.Start();
+
+
+            for (int i = 0; i < countForTest3andTest4; i++)
+            {
+                ProcessStringPlus(i);
+            }
+
+            sw.Stop();
+
+            DisplayStopWatchResults("Test35()-ProcessStringPlus | For Loop", countForTest3andTest4, sw, null, null);
+
+            return sw;
+        }
+
+        private static Stopwatch Test4(Stopwatch test3Sw, string taskFirst)
+        {
+            sw = new Stopwatch();
             sw.Start();
 
             for (int i = 0; i < countForTest3andTest4; i++)
@@ -60,7 +83,7 @@ namespace StringBuilderFormatPlus
 
             sw.Stop();
 
-            DisplayStopWatchResults("Test4()-ProcessStringBuilderAppend | For Loop", countForTest3andTest4, sw, test3Sw, "Test3()-ProcessStringFormat");
+            DisplayStopWatchResults("Test4()-ProcessStringBuilderAppend | For Loop", countForTest3andTest4, sw, test3Sw, taskFirst);
 
             return sw;
         }
@@ -91,6 +114,19 @@ namespace StringBuilderFormatPlus
             Debug.WriteLine(string.Format("ProcessStringFormat | Count: {0} | We will win the {1} one day soon hopefully!",
                                             count != null ? string.Format("{0:n0}", count) : "no count",
                                             oreo));
+        }
+
+        private static void ProcessStringPlus(int? count)
+        {
+
+            string value = "ProcessStringPlus | Count: " +
+                            (count != null ? string.Format("{0:n0}", count) : "no count") +
+                            " | We will win the " + oreo + " one day soon hopefully!";
+
+
+            Debug.WriteLine(value);
+                                          
+                                            
         }
 
         private static void ProcessStringBuilderAppend(int? count)
@@ -125,7 +161,7 @@ namespace StringBuilderFormatPlus
             TimeSpan spanSecond;
             TimeSpan spanDiff;
 
-            if (swFirst != null && sw != null)
+            if (swFirst != null && taskFirst != null)
             {
 
                 if (swFirst.Elapsed.TotalMilliseconds > sw.Elapsed.TotalMilliseconds)
@@ -138,9 +174,9 @@ namespace StringBuilderFormatPlus
 
                     spanDiff = spanFirst.Subtract(spanSecond);
 
-                    outputDiff = string.Format("Time: {0} | Task {1} was faster by: {2} | Total Milliseconds: {3}",
+                    outputDiff = string.Format("Time: {0} | Task {1} was slower by: {2} | Total Milliseconds: {3}",
                                                 DateTime.Now.ToString(),
-                                                taskFirst, spanDiff.ToString(), spanDiff.TotalMilliseconds.ToString());
+                                                taskFirst, spanDiff.Duration().ToString(), spanDiff.Duration().TotalMilliseconds.ToString());
                 }
                 else
                 {
@@ -152,9 +188,9 @@ namespace StringBuilderFormatPlus
 
                     spanDiff = spanSecond.Subtract(spanFirst);
 
-                    outputDiff = string.Format("Time: {0} | Task {1} was faster by: {2} | Total Milliseconds: {3}",
+                    outputDiff = string.Format("Time: {0} | Task {1} was slower by: {2} | Total Milliseconds: {3}",
                                                DateTime.Now.ToString(),
-                                               task, spanDiff.ToString(), spanDiff.TotalMilliseconds.ToString());
+                                               task, spanDiff.Duration().ToString(), spanDiff.Duration().TotalMilliseconds.ToString());
                 }
 
                 Debug.WriteLine(outputDiff);
@@ -180,7 +216,7 @@ namespace StringBuilderFormatPlus
                     writer.WriteLine(output);
                     writer.WriteLine("=========================>>>");
                     writer.WriteLine(outputDiff);
-                    writer.WriteLine("------------------------------------------------------------------------------------------------------------------");
+                    writer.WriteLine("-------------------------------------------------------------------------------------------------------------------------------");
                 }
                 
             }
