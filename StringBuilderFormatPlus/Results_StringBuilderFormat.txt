@@ -1,0 +1,6 @@
+Time: 3/10/2017 8:59:45 AM | Task: Test3()-ProcessStringFormat | For Loop | Number: 10 | StopWatch Time: 00:00:00.0216338
+-------------------------
+Time: 3/10/2017 8:59:45 AM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 10 | StopWatch Time: 00:00:00.0067583
+=========================>>>
+Time: 3/10/2017 8:59:45 AM | Task Test4()-ProcessStringBuilderAppend | For Loop was faster by: 00:00:00 | Total Milliseconds: 0
+------------------------------------------------------------------------------------------------------------------

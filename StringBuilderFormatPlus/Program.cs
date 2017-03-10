@@ -13,7 +13,7 @@ namespace StringBuilderFormatPlus
         static string oreo = "oreo";
         static Stopwatch sw;
 
-        static int countForTest3andTest4 = 1000;
+        static int countForTest3andTest4 = 10;
 
         static void Main(string[] args)
         {
@@ -26,6 +26,8 @@ namespace StringBuilderFormatPlus
 
             swFirst = Test3();
             Test4(swFirst);
+
+            //string test = AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\","");
         }
 
         private static Stopwatch Test3()
@@ -136,7 +138,7 @@ namespace StringBuilderFormatPlus
 
                     spanDiff = spanFirst.Subtract(spanSecond);
 
-                    outputDiff = string.Format("Time: {0} | {1} was faster by: {2} | Total Milliseconds: {3}",
+                    outputDiff = string.Format("Time: {0} | Task {1} was faster by: {2} | Total Milliseconds: {3}",
                                                 DateTime.Now.ToString(),
                                                 taskFirst, spanDiff.ToString(), spanDiff.TotalMilliseconds.ToString());
                 }
@@ -150,7 +152,7 @@ namespace StringBuilderFormatPlus
 
                     spanDiff = spanSecond.Subtract(spanFirst);
 
-                    outputDiff = string.Format("Time: {0} | {1} was faster by: {2} | Total Milliseconds: {3}",
+                    outputDiff = string.Format("Time: {0} | Task {1} was faster by: {2} | Total Milliseconds: {3}",
                                                DateTime.Now.ToString(),
                                                task, spanDiff.ToString(), spanDiff.TotalMilliseconds.ToString());
                 }
@@ -159,10 +161,14 @@ namespace StringBuilderFormatPlus
             }
 
 
+
+            string fullPath = string.Format("{0}{1}",
+                                        AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\", ""),
+                                        "Results_StringBuilderFormat.txt");
            
 
             // put to a text file...
-            using (StreamWriter writer = new StreamWriter("Results_StringBuilderFormat.txt", true))
+            using (StreamWriter writer = new StreamWriter(fullPath, true))
             {
                 if(swFirst == null && taskFirst == null)
                 {
@@ -172,7 +178,7 @@ namespace StringBuilderFormatPlus
                 else
                 {
                     writer.WriteLine(output);
-                    writer.WriteLine("-----------------------------------");
+                    writer.WriteLine("=========================>>>");
                     writer.WriteLine(outputDiff);
                     writer.WriteLine("------------------------------------------------------------------------------------------------------------------");
                 }
