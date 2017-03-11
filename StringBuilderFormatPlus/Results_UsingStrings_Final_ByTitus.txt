@@ -1,0 +1,24 @@
+Time: 3/10/2017 6:12:40 PM | Task: Test3()-ProcessStringUsing_StringFormat | For Loop | Number: 100000 | StopWatch Time: 00:00:51.8543820
+-------------------------
+Time: 3/10/2017 6:13:29 PM | Task: Test4()-ProcessStringUsing_StringBuilderAppend | For Loop | Number: 100000 | StopWatch Time: 00:00:48.5938754
+=========================>>>
+Time: 3/10/2017 6:13:29 PM | Task Test3()-ProcessStringUsing_StringFormat was slower by: 00:00:03.2610000 | Total Milliseconds: 3261
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 6:15:20 PM | Task: Test3()-ProcessString_Using_StringFormat | For Loop | Number: 100000 | StopWatch Time: 00:00:50.3777432
+-------------------------
+Time: 3/10/2017 6:16:08 PM | Task: Test4()-ProcessString_Using_StringBuilderAppend | For Loop | Number: 100000 | StopWatch Time: 00:00:48.6314549
+=========================>>>
+Time: 3/10/2017 6:16:08 PM | Task Test3()-ProcessString_Using_StringFormat was slower by: 00:00:01.7460000 | Total Milliseconds: 1746
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 6:18:25 PM | Task: Test35()-ProcessString_Using_APlus | For Loop | Number: 100000 | StopWatch Time: 00:00:56.9994731
+-------------------------
+Time: 3/10/2017 6:19:18 PM | Task: Test4()-ProcessString_Using_StringBuilderAppend | For Loop | Number: 100000 | StopWatch Time: 00:00:52.7057198
+=========================>>>
+Time: 3/10/2017 6:19:18 PM | Task Test35()-ProcessString_Using_APlus was slower by: 00:00:04.2940000 | Total Milliseconds: 4294
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 6:20:48 PM | Task: Test35()-ProcessString_Using_APlus | For Loop | Number: 100000 | StopWatch Time: 00:00:51.0086570
+-------------------------
+Time: 3/10/2017 6:21:39 PM | Task: Test4()-ProcessString_Using_StringBuilderAppend | For Loop | Number: 100000 | StopWatch Time: 00:00:50.6548893
+=========================>>>
+Time: 3/10/2017 6:21:39 PM | Task Test35()-ProcessString_Using_APlus was slower by: 00:00:00.3540000 | Total Milliseconds: 354
+-------------------------------------------------------------------------------------------------------------------------------

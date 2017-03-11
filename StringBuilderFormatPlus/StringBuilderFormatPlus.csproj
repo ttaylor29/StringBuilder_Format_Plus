@@ -53,6 +53,7 @@
   <ItemGroup>
     <Content Include="Results_StringBuilderFormat.txt" />
     <Content Include="Results_StringBuilderFormat_First.txt" />
+    <Content Include="Results_UsingStrings_Final_ByTitus.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

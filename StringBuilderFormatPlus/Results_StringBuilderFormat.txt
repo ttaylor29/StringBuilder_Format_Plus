@@ -64,3 +64,15 @@ Time: 3/10/2017 10:12:56 AM | Task: Test4()-ProcessStringBuilderAppend | For Loo
 =========================>>>
 Time: 3/10/2017 10:12:56 AM | Task Test35()-ProcessStringPlus was slower by: 00:00:00.1590000 | Total Milliseconds: 159
 -------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 5:58:53 PM | Task: Test35()-ProcessString_UsingAPlus | For Loop | Number: 100000 | StopWatch Time: 00:00:54.9276018
+-------------------------
+Time: 3/10/2017 5:59:45 PM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 100000 | StopWatch Time: 00:00:52.5523486
+=========================>>>
+Time: 3/10/2017 5:59:45 PM | Task Test35()-ProcessString_UsingAPlus was slower by: 00:00:02.3750000 | Total Milliseconds: 2375
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 6:03:44 PM | Task: Test3()-ProcessStringFormat | For Loop | Number: 100000 | StopWatch Time: 00:00:48.0683253
+-------------------------
+Time: 3/10/2017 6:04:42 PM | Task: Test4()-ProcessStringBuilderAppend | For Loop | Number: 100000 | StopWatch Time: 00:00:57.0154901
+=========================>>>
+Time: 3/10/2017 6:04:42 PM | Task Test4()-ProcessStringBuilderAppend | For Loop was slower by: 00:00:08.9470000 | Total Milliseconds: 8947
+-------------------------------------------------------------------------------------------------------------------------------

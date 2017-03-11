@@ -13,11 +13,18 @@ namespace StringBuilderFormatPlus
         static string oreo = "oreo";
         static Stopwatch sw;
         static Stopwatch swFirst;
+        static string fullPath;
 
         static int countForTest3andTest4 = 100000;
 
         static void Main(string[] args)
         {
+            // set path
+            fullPath = string.Format("{0}{1}",
+                                     AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\", ""),
+                                     "Results_UsingStrings_Final_ByTitus.txt");
+
+
             sw = new Stopwatch();
 
             swFirst = new Stopwatch();
@@ -26,11 +33,11 @@ namespace StringBuilderFormatPlus
             //Test2();
 
             //swFirst = Test3();
-            //Test4(swFirst, "Test3()-ProcessStringFormat");
+            //Test4(swFirst, "Test3()-ProcessString_Using_StringFormat");
 
 
             swFirst = Test35();
-            Test4(swFirst, "Test35()-ProcessStringPlus");
+            Test4(swFirst, "Test35()-ProcessString_Using_APlus");
 
             //string test = AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\","");
         }
@@ -43,12 +50,12 @@ namespace StringBuilderFormatPlus
            
             for (int i = 0; i < countForTest3andTest4; i++)
             {
-                ProcessStringFormat(i);
+                ProcessString_Using_StringFormat(i);
             }
 
             sw.Stop();
 
-            DisplayStopWatchResults("Test3()-ProcessStringFormat | For Loop", countForTest3andTest4, sw, null, null);
+            DisplayStopWatchResults("Test3()-ProcessString_Using_StringFormat | For Loop", countForTest3andTest4, sw, null, null);
 
             return sw;
         }
@@ -61,12 +68,12 @@ namespace StringBuilderFormatPlus
 
             for (int i = 0; i < countForTest3andTest4; i++)
             {
-                ProcessStringPlus(i);
+                ProcessString_Using_APlus(i);
             }
 
             sw.Stop();
 
-            DisplayStopWatchResults("Test35()-ProcessStringPlus | For Loop", countForTest3andTest4, sw, null, null);
+            DisplayStopWatchResults("Test35()-ProcessString_Using_APlus | For Loop", countForTest3andTest4, sw, null, null);
 
             return sw;
         }
@@ -78,12 +85,12 @@ namespace StringBuilderFormatPlus
 
             for (int i = 0; i < countForTest3andTest4; i++)
             {
-                ProcessStringBuilderAppend(i);
+                ProcessString_Using_StringBuilderAppend(i);
             }
 
             sw.Stop();
 
-            DisplayStopWatchResults("Test4()-ProcessStringBuilderAppend | For Loop", countForTest3andTest4, sw, test3Sw, taskFirst);
+            DisplayStopWatchResults("Test4()-ProcessString_Using_StringBuilderAppend | For Loop", countForTest3andTest4, sw, test3Sw, taskFirst);
 
             return sw;
         }
@@ -92,34 +99,34 @@ namespace StringBuilderFormatPlus
         {
             sw.Reset();
             sw.Start();
-            ProcessStringFormat(null);
+            ProcessString_Using_StringFormat(null);
             sw.Stop();
 
-            DisplayStopWatchResults("Test1()-ProcessStringFormat", null, sw, null, null);
+            DisplayStopWatchResults("Test1()-ProcessString_Using_StringFormat", null, sw, null, null);
         }
 
         private static Stopwatch Test2(Stopwatch swFirst, string taskFirst)
         {
             sw.Start();
-            ProcessStringBuilderAppend(null);
+            ProcessString_Using_StringBuilderAppend(null);
             sw.Stop();
 
-            DisplayStopWatchResults("Test2()-ProcessStringBuilderAppend", null, sw, swFirst, taskFirst);
+            DisplayStopWatchResults("Test2()-ProcessString_Using_StringBuilderAppend", null, sw, swFirst, taskFirst);
 
             return sw;
         }
 
-        private static void ProcessStringFormat(int? count)
+        private static void ProcessString_Using_StringFormat(int? count)
         {
-            Debug.WriteLine(string.Format("ProcessStringFormat | Count: {0} | We will win the {1} one day soon hopefully!",
+            Debug.WriteLine(string.Format("ProcessString_Using_StringFormat | Count: {0} | We will win the {1} one day soon hopefully!",
                                             count != null ? string.Format("{0:n0}", count) : "no count",
                                             oreo));
         }
 
-        private static void ProcessStringPlus(int? count)
+        private static void ProcessString_Using_APlus(int? count)
         {
 
-            string value = "ProcessStringPlus | Count: " +
+            string value = "ProcessString_Using_APlus | Count: " +
                             (count != null ? string.Format("{0:n0}", count) : "no count") +
                             " | We will win the " + oreo + " one day soon hopefully!";
 
@@ -129,11 +136,11 @@ namespace StringBuilderFormatPlus
                                             
         }
 
-        private static void ProcessStringBuilderAppend(int? count)
+        private static void ProcessString_Using_StringBuilderAppend(int? count)
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("ProcessStringBuilderAppend | Count: ");
+            sb.Append("ProcessString_Using_StringBuilderAppend | Count: ");
             sb.Append(count != null ? string.Format("{0:n0}", count) : "no count");
             sb.Append(" | ");
             sb.Append("We will win the");
@@ -198,9 +205,7 @@ namespace StringBuilderFormatPlus
 
 
 
-            string fullPath = string.Format("{0}{1}",
-                                        AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\", ""),
-                                        "Results_StringBuilderFormat.txt");
+           
            
 
             // put to a text file...
