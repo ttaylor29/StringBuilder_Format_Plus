@@ -15,7 +15,7 @@ namespace StringBuilderFormatPlus
         static Stopwatch swFirst;
         static string fullPath;
 
-        static int countForTest3andTest4 = 100000;
+        static int countForTest3andTest4 = 200000;
 
         static void Main(string[] args)
         {
@@ -29,18 +29,22 @@ namespace StringBuilderFormatPlus
 
             swFirst = new Stopwatch();
 
+            // Test 4 is string builder append
+            // Test 3 is string format
+            // test 35 is using a +
+
             //Test1();
             //Test2();
 
             //swFirst = Test3();
             //Test4(swFirst, "Test3()-ProcessString_Using_StringFormat");
 
-            swFirst = Test35();
-            Test3_1(swFirst, "Test35()-ProcessString_Using_APlus");
-
-
             //swFirst = Test35();
-            //Test4(swFirst, "Test35()-ProcessString_Using_APlus");
+            //Test3_1(swFirst, "Test35()-ProcessString_Using_APlus");
+
+
+            swFirst = Test35();
+            Test4(swFirst, "Test35()-ProcessString_Using_APlus");
 
             //string test = AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\","");
         }
@@ -179,7 +183,7 @@ namespace StringBuilderFormatPlus
             string output = string.Format("Time: {0} | Task: {1} | Number: {2} | StopWatch Time: {3}",
                                             DateTime.Now.ToString(),
                                             task,
-                                            count != null ? string.Format("{0:n0}", count.ToString()) : "no count",
+                                            count != null ? string.Format("{0:n0}", count) : "no count",
                                             sw.Elapsed.ToString());
 
             Debug.WriteLine(output);
