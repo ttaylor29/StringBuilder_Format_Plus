@@ -52,3 +52,24 @@ Time: 3/10/2017 9:03:33 PM | Task: Test4()-ProcessString_Using_StringBuilderAppe
 =========================>>>
 Time: 3/10/2017 9:03:33 PM | Task Test35()-ProcessString_Using_APlus was slower by: 00:00:05.5770000 | Total Milliseconds: 5577
 -------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:10:36 PM | Task: Test35()-ProcessString_Using_APlus | For Loop | Number: 200,000 | StopWatch Time: 00:01:34.3091909
+-------------------------
+Time: 3/10/2017 10:12:12 PM | Task: Test4()-ProcessString_Using_StringBuilderAppend | For Loop | Number: 200,000 | StopWatch Time: 00:01:35.8206176
+=========================>>>
+Time: 3/10/2017 10:12:12 PM | Task Test4()-ProcessString_Using_StringBuilderAppend | For Loop was slower by: 00:00:01.5110000 | Total Milliseconds: 1511
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:13:55 PM | Task: Test35()-ProcessString_Using_APlus | For Loop | Number: 200,000 | StopWatch Time: 00:01:42.3445666
+-------------------------
+Time: 3/10/2017 10:15:28 PM | Task: Test4()-ProcessString_Using_StringBuilderAppend | For Loop | Number: 200,000 | StopWatch Time: 00:01:33.1612226
+=========================>>>
+Time: 3/10/2017 10:15:28 PM | Task Test35()-ProcessString_Using_APlus was slower by: 00:00:09.1830000 | Total Milliseconds: 9183
+-------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+Time: 3/10/2017 10:17:24 PM | Task: Test35()-ProcessString_Using_APlus | For Loop | Number: 200,000 | StopWatch Time: 00:01:56.4414261
+-------------------------
+Time: 3/10/2017 10:19:11 PM | Task: Test4()-ProcessString_Using_StringBuilderAppend | For Loop | Number: 200,000 | StopWatch Time: 00:01:47.1017807
+=========================>>>
+Time: 3/10/2017 10:19:11 PM | Task Test35()-ProcessString_Using_APlus was slower by: 00:00:09.3400000 | Total Milliseconds: 9340
+-------------------------------------------------------------------------------------------------------------------------------

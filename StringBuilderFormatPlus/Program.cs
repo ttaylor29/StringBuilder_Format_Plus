@@ -42,9 +42,12 @@ namespace StringBuilderFormatPlus
             //swFirst = Test35();
             //Test3_1(swFirst, "Test35()-ProcessString_Using_APlus");
 
-
-            swFirst = Test35();
-            Test4(swFirst, "Test35()-ProcessString_Using_APlus");
+            for (int i = 0; i < 3; i++)
+            {
+                swFirst = new Stopwatch();
+                swFirst = Test35();
+                Test4(swFirst, "Test35()-ProcessString_Using_APlus");
+            }
 
             //string test = AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\","");
         }
@@ -238,6 +241,7 @@ namespace StringBuilderFormatPlus
             {
                 if(swFirst == null && taskFirst == null)
                 {
+                    writer.WriteLine("-------------------------------------------------------------------------------------------------------------------------------");
                     writer.WriteLine(output);
                     writer.WriteLine("-------------------------");
                 }
