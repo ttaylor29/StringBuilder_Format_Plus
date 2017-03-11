@@ -35,9 +35,12 @@ namespace StringBuilderFormatPlus
             //swFirst = Test3();
             //Test4(swFirst, "Test3()-ProcessString_Using_StringFormat");
 
-
             swFirst = Test35();
-            Test4(swFirst, "Test35()-ProcessString_Using_APlus");
+            Test3_1(swFirst, "Test35()-ProcessString_Using_APlus");
+
+
+            //swFirst = Test35();
+            //Test4(swFirst, "Test35()-ProcessString_Using_APlus");
 
             //string test = AppDomain.CurrentDomain.BaseDirectory.ToString().Replace(@"bin\Debug\","");
         }
@@ -56,6 +59,24 @@ namespace StringBuilderFormatPlus
             sw.Stop();
 
             DisplayStopWatchResults("Test3()-ProcessString_Using_StringFormat | For Loop", countForTest3andTest4, sw, null, null);
+
+            return sw;
+        }
+
+        private static Stopwatch Test3_1(Stopwatch test35Sw, string taskFirst)
+        {
+            sw = new Stopwatch();
+            sw.Start();
+
+
+            for (int i = 0; i < countForTest3andTest4; i++)
+            {
+                ProcessString_Using_StringFormat(i);
+            }
+
+            sw.Stop();
+
+            DisplayStopWatchResults("Test3_1()-ProcessString_Using_StringFormat | For Loop", countForTest3andTest4, sw, test35Sw, taskFirst);
 
             return sw;
         }
